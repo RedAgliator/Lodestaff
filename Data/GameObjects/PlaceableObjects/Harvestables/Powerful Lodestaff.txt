@@ -1,0 +1,105 @@
+﻿
+GameObjects
+{
+	Equipable
+	{
+		Powerful Lodestaff
+		{
+			Transform
+			{
+			}
+			
+			Script
+			{
+				file = "Scripts/Objects/Lodestaff.lua"
+				class = "Lodestaff"
+			
+				arguments
+				{
+					powerful = true
+
+					encumbrance = 0.4
+
+					incorrectTierCap = 3			
+					dataMetricCategory = "Staff"					
+					UBPcraft = 8
+					LBPcraft = 8
+					XPcraft = 16
+
+					CreakingDurability = 16.0
+					CreakingSound = "ItemCreak"
+					BreakSound = "ItemBreak"
+
+					SwingSound = "LithariSummon"
+					WeaponSwing = "LithariSummon"
+					ambSound = "GlowingPlantAmbient"
+				}
+			}
+			
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Harvestables/woodStaff.obj"	
+				dontCastShadows = 1.0				
+			
+				Diffuse
+				{
+					0 = "Character/Weapons/0spearB_WLV_New_diff.tga"
+				}
+			
+				Normal
+				{
+					0 = "Character/Weapons/0spearB_norm.tga"
+				}				
+			}
+			
+			RigidBody
+			{
+				activePhysics = 1
+				mass = 1.0
+				friction = 100.0				
+			}
+			
+			Equipable
+			{
+				name = "Powerful Lodestaff"
+				icon = "Lodestaff"
+				minScale = 1.0
+				maxScale = 1.0
+
+				category = "Lodestaff"
+				tier = 4
+				resource = 1
+				maxStackCount = 1
+				
+				durability = 480.0
+				damageToCharacters = 0.0
+				damageToObjects = 0.0
+
+				placementSound = "SandPlace"
+				miningEmitter = "Strike Glint Emitter"
+				miningEmitterAlt = "Strike EmbersQuarter Emitter"
+
+				Equipment Slots
+				{
+					Tool
+				}
+			}
+
+			Light
+			{
+				lightRadius = 10.0
+				lightOffset = <2.0, 0.0, 0.0>
+				lightColor = <0.5, 0.5, 0.1>
+			}
+			
+			Children
+			{
+				Wisp Blue Body Emitter
+				{
+					Bn_Wisp01
+					offset = <2.0, 0, 0>
+				}
+			}
+		}		
+	}
+}

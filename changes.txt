@@ -1,0 +1,10 @@
+version 0.0.4 (Apr 14, 2015)
+- Updated for TUG v0.8.4
+- No longer requires CommonLib, though having it installs enables some testing shortcuts
+
+version 0.0.3 (Mar 31, 2015)
+- Works in multiplayer, thanks to Johny Cilohokla
+
+version 0.0.2 (Mar 24, 2015)
+- Removed Empowerment recipe, replaced with powerful gathering ritual (see recipe_spoiler.txt)
+  This was the original intention for the recipes

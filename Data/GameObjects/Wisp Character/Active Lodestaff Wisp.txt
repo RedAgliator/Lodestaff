@@ -1,0 +1,96 @@
+﻿{
+	Character
+	{
+
+		Active Lodestaff Wisp
+		{
+			Transform
+			{
+			}
+
+			Script
+			{
+				file = "Scripts/Characters/NavWisp.lua"
+				class = "NavWisp"
+				arguments
+				{
+
+					category = "Ethereal"
+					tier = 4
+					
+					playerdistance = 6.5
+					maxspeed = 9.0
+					maxacceleration = 0.6
+					maxdeceleration = 0.8
+					turnrate = 10000.0
+					closeenough = 1.0
+					follow = true
+				}
+			}
+			
+			AnimatedGraphics
+			{
+				model = "Character/Wisp/MeshAndSkel.fbx"
+				skeleton = "Character/Wisp/skel.fbx"
+				Offset = <0.0, 3.0, 0.0>
+
+				Diffuse
+				{
+					0 = "Character/Seed/FP/1Teen/Male/textures/arm_nude_rt.tga"
+					1 = "Character/Seed/FP/1Teen/Male/textures/arm_nude_lt.tga"
+					2 = "Character/Seed/FP/1Teen/Male/textures/lifestone.tga"
+				}
+				Normal
+				{
+					0 = "Models/fps_hands/arms_bump.TGA"
+					1 = "Models/fps_hands/arms_bump.TGA"
+					2 = "Materials/nullnormal.tga"
+				}
+
+				Animations
+				{
+						Idle
+						{
+							path = "Character/Wisp/01_Idle.fbx"
+						}
+
+						Walk
+						{
+							path = "Character/Wisp/02_Walk.fbx"
+						}
+				}
+			}
+
+			Light
+			{
+				lightRadius = 10.0
+				lightOffset = <0.0, 0.0, 0.0>
+				lightColor = <0.6, 0.6, 0.1>
+			}
+			
+			Children
+			{
+				Wisp Blue Body Emitter
+				{
+					Bn_Wisp01
+				}
+
+				Wisp Blue Tail Emitter
+				{
+					Bn_Wisp01
+				}
+				
+				Wisp Blue Ribbon Emitter
+				{
+					Bn_Wisp01
+				}	
+
+				Wisp Attractor
+				{
+					Bn_Wisp01
+					emitter = "Wisp Blue Body Emitter"
+				}
+			}
+		}
+	}
+}

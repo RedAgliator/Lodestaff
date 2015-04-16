@@ -1,0 +1,19 @@
+Lodestaff Recipe (spoiler)
+
+
+a) The basic lodestaff spawns an energy wisp to point your way back to its "home".
+	Recipe:
+	- 1x seeds from a vine fruit (Melon, Pumpkin, or Gourd seeds)
+	- 1x seeds from a tree fruit (Apple, Orange, or Cherry seeds)
+	- 1x any mushroom chunk
+	- 1x grass clump (dig a grass-covered voxel)
+	- 1x dirt, mud, clay, or sand clump (dig bare voxels, or below the surface)
+	- 1x bamboo or wood shaft
+	Drop everything on the ground and hit the 'G' key to start crafting. (No tool or workspace needed, at least for now.) 
+	The lodestaff's "home" will be set to the spot where it appears. 
+
+
+b) For a more powerful lodestaff, place the same items next to a natural crystal formation and hit the 'G' key. 	The energy released by the new lodestaff will follow you around instead of staying where it appears.
+
+
+WARNING: these recipes use a great deal of your Seed's energy, so make sure you have food or a bed!

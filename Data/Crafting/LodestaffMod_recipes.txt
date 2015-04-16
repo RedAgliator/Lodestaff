@@ -1,0 +1,143 @@
+All Recipes
+{
+	Powerful Lodestaff Gathering Ritual
+	{	
+		Script = "Scripts/Recipes/DefaultRecipe.lua"
+
+		LuaData
+		{
+			craftTime = 6.0
+			energyCost = 15.0
+			priority = 3.0
+
+			Components
+			{
+				Shaft
+				{
+					"Long Shaft" = 1
+				}
+				Vine Fruit Seed
+				{
+					"Melon Seeds" = 1
+					"Purple Gourd Seeds" = 1
+					"Pumpkin Seeds" = 1
+				}
+				Tree Fruit Seed
+				{
+					"Red Apple Seeds" = 1
+					"Orange Seeds" = 1
+					"Cherry Seeds" = 1
+				}
+				Mushroom Piece
+				{
+					"Ghost Mushroom Chunk" = 1
+					"Blue Mushroom Chunk" = 1
+					"Brown Mushroom Chunk" = 1
+					"Orange Mushroom Chunk" = 1
+					"Pink Mushroom Chunk" = 1
+					"Purple Mushroom Chunk" = 1
+					"Red Mushroom Chunk" = 1
+					"Silver Mushroom Chunk" = 1
+				}
+				Grass
+				{
+					"Light Green Grass Clump" = 1
+				}
+				Ground
+				{
+					"Clay Clump" = 1
+					"Dirt Clump" = 1
+					"Sand Clump" = 1
+					"Mud Clump" = 1
+				}
+			}
+						
+			Unconsumed Components
+			{
+				Crystal
+				{
+					"Ruby Cluster" = 1
+					"Topaz Cluster" = 1
+					"Firestone Cluster" = 1
+					"Citrine Cluster" = 1
+					"Peridot Cluster" = 1
+					"Blue Crystal Cluster" = 1
+					"Froststone Cluster" = 1
+					"Sapphire Cluster" = 1
+					"Amethyst Cluster" = 1
+					"Ruby Spire" = 1
+					"Topaz Spire" = 1
+					"Firestone Spire" = 1
+					"Citrine Spire" = 1
+					"Peridot Spire" = 1
+					"Blue Crystal Spire" = 1
+					"Froststone Spire" = 1
+					"Sapphire Spire" = 1
+					"Amethyst Spire" = 1
+				}
+			}
+
+			Results
+			{
+				"Powerful Lodestaff" = 1
+			}
+		}
+	}
+	Weak Lodestaff Gathering Ritual
+	{	
+		Script = "Scripts/Recipes/DefaultRecipe.lua"
+
+		LuaData
+		{
+			craftTime = 6.0
+			energyCost = 20.0
+
+			Components
+			{
+				Shaft
+				{
+					"Long Shaft" = 1
+				}
+				Vine Fruit Seed
+				{
+					"Melon Seeds" = 1
+					"Purple Gourd Seeds" = 1
+					"Pumpkin Seeds" = 1
+				}
+				Tree Fruit Seed
+				{
+					"Red Apple Seeds" = 1
+					"Orange Seeds" = 1
+					"Cherry Seeds" = 1
+				}
+				Mushroom Piece
+				{
+					"Ghost Mushroom Chunk" = 1
+					"Blue Mushroom Chunk" = 1
+					"Brown Mushroom Chunk" = 1
+					"Orange Mushroom Chunk" = 1
+					"Pink Mushroom Chunk" = 1
+					"Purple Mushroom Chunk" = 1
+					"Red Mushroom Chunk" = 1
+					"Silver Mushroom Chunk" = 1
+				}
+				Grass
+				{
+					"Light Green Grass Clump" = 1
+				}
+				Ground
+				{
+					"Clay Clump" = 1
+					"Dirt Clump" = 1
+					"Sand Clump" = 1
+					"Mud Clump" = 1
+				}
+			}
+						
+			Results
+			{
+				"Weak Lodestaff" = 1
+			}
+		}
+	}
+}

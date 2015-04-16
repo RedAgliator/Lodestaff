@@ -1,0 +1,12 @@
+Credits
+{
+  PraiseSyntax = "0.0.1"
+
+  TinyCredits = "Lodestaff (0.0.4), by Red Agliator"
+
+  ShortCredits = "Idea and scripting: Red Agliator"
+
+  LongCredits = "Idea and scripting: Red Agliator"
+
+  FullCredits = "Idea and scripting: Red Agliator"
+}

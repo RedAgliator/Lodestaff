@@ -1,0 +1,23 @@
+Manifest
+{
+	# Name of the mods.
+	Name = "Lodestaff"
+
+	# Description of the mod.
+	Description = "Find your way home, by Red Agliator. TUG v0.8.4 ONLY!"
+
+	# The major version number.
+	MajorVersion = 0.0
+
+	# The minor version number.
+	MinorVersion = 0.0
+
+	# The patch version number. (Used by the Praise mod)
+	PatchVersion = 0.4
+
+	# The file path to the script that is the entry point.
+	ScriptFile = "Scripts/LodestaffMod.lua"
+
+	# The script entry point class name
+	ScriptClass = "LodestaffMod"
+}
