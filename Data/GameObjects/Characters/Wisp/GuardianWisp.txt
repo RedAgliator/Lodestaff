@@ -1,0 +1,350 @@
+
+{
+	GuardianWisp
+	{
+		GuardianWisp
+		{
+			# Mark this GameObject as a startup-time loaded assets.
+			Preload
+			NoCull
+
+			Transform
+			{
+			}		
+			Script
+			{
+				file = "Scripts/Characters/GuardianWisp.lua"
+				class = "GuardianWisp"
+			
+				arguments
+				{
+					category = "Flesh"
+					tier = 1
+
+					HitPoints = 25
+
+					dataMetricCategory = "Goat"
+					UBPdefeat = 6
+					LBPdefeat = 7
+					XPdefeat = 13
+					UBPskin = 5
+					LBPskin = 5
+					XPskin = 10						
+
+					Lootable
+					{
+						Animal Hide
+						{
+							dropChance = 1.0
+							dropMinAmount = 1
+							dropMaxAmount = 1
+						}
+						Raw Meat
+						{
+							dropChance = 1.0
+							dropMinAmount = 1
+							dropMaxAmount = 2
+						}
+						Animal Horn
+						{
+							dropChance = 1.0
+							dropMinAmount = 1
+							dropMaxAmount = 1
+						}
+					}
+					Hunger
+					{
+						maxHunger = 20.0
+						regenPerSecond = -1.0
+ 
+						States
+						{
+							Malnutrition = 0.0
+							Starving = .1
+							Hungry = .4
+							Satisfied = .9
+							Full = .9
+						}
+					}
+					OnHitEmitter
+					{
+						Name = "Combat Hit HP Emitter"
+						Offset = <0.0, 2.0, 0.0>
+					}
+
+					OnLootEmitter
+					{
+						Name = "Strike FurBrown Emitter"
+						Offset = <0.0, 2.0, 0.0>
+					}
+				}
+			}
+			AnimatedGraphics
+			{
+				scale = 0.023
+				Offset = <0.0, 0.0, 0.0>
+				model = "Character/Critters/Domesticated/Quadruped1.FBX"
+				
+				Diffuse
+				{
+					0 = "Character/Critters/Domesticated/Goat/goat_Diff.tga"
+				}
+				Normal
+				{
+				}
+				Glow
+				{
+					0 = "Character/Critters/Domesticated/Goat/Goat_glow.tga"
+				}
+				Animations
+				{
+					Idle
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle1.fbx"
+					}
+					Head_Shake
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle2.fbx"
+					}
+					Graze_In
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle3a.fbx"
+					}
+					Graze_Loop
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle3b.fbx"
+					}
+					Graze_Out
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle3c.fbx"
+					}
+					Walk
+					{
+						path = "Character/Critters/Domesticated/Goat/02_meander.fbx"
+					}
+					Run
+					{
+						path = "Character/Critters/Domesticated/Goat/04_bound.fbx"
+					}
+					Trot
+					{
+						path = "Character/Critters/Domesticated/Goat/03_trot.fbx"
+					}
+					Alert
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle4a.fbx"
+					}
+					Alert_Search
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle4b.fbx"
+					}
+					Alert_Loop
+					{
+						path = "Character/Critters/Domesticated/Goat/01_idle4c.fbx"
+					}
+					Hurt
+					{
+						path = "Character/Critters/Domesticated/Goat/07_hurtLf.FBX"
+					}
+					Hurt_Right
+					{
+						path = "Character/Critters/Domesticated/Goat/07_hurtRt.FBX"
+					}
+					Death_Left
+					{
+						path = "Character/Critters/Domesticated/Goat/08_deathLf.FBX"
+					}
+					Death
+					{
+						path = "Character/Critters/Domesticated/Goat/08_deathRt.FBX"
+						events
+						{
+							"OnDeathComplete" = 1.333
+						}
+					}
+				}
+				BlendTree
+				{
+					root = "Full Body"
+					Nodes
+					{
+						BlendLeaf
+						{
+							name = "Head Shake Node"
+							animation = "Head_Shake"
+							restartOnActivate = 1
+							loop = 0
+						}
+						BlendLeaf
+						{
+							name = "Standing Idle Node"
+							animation = "Idle"
+							loop = 1
+						}
+						BlendLeaf
+						{
+							name = "Walk Node"
+							animation = "Walk"
+						}
+						BlendLeaf
+						{
+							name = "Run Node"
+							animation = "Run"
+						}
+						BlendLeaf
+						{
+							name = "Trot Node"
+							animation = "Trot"
+						}
+						BlendLeaf
+						{
+							name = "Graze In Node"
+							animation = "Graze_In"
+							restartOnActivate = 1
+							loop = 0
+						}
+						BlendLeaf
+						{
+							name = "Graze Loop Node"
+							animation = "Graze_Loop"
+							restartOnActivate = 1
+						}
+						BlendLeaf
+						{
+							name = "Graze Out Node"
+							animation = "Graze_Out"
+							restartOnActivate = 1
+							loop = 0
+						}
+						BlendLeaf
+						{
+							name = "Alert Search Node"
+							animation = "Alert_Search"
+							restartOnActivate = 1
+							loop = 1
+						}
+						BlendLeaf
+						{
+							name = "Alert Node"
+							animation = "Alert_Loop"
+							restartOnActivate = 1
+							loop = 1
+						}
+						BlendLeaf
+						{
+							name = "Hurt Node"
+							animation = "Hurt"
+							restartOnActivate = 1
+							loop = 0
+						}
+						BlendState
+						{
+							name = "Idle State"
+							state_name = "IdleState"
+							transitionTime = 0.1
+
+							States
+							{
+								0 = "Standing Idle Node"
+								1 = "Graze In Node"
+								2 = "Graze Loop Node"
+								3 = "Graze Out Node"
+								4 = "Alert Search Node"
+							}
+						}
+						BlendSlot
+						{
+							name = "Head Slot"
+
+							Children
+							{
+								0 = "Idle State"
+							}
+						}
+						BlendByBoneMask
+						{
+							name = "Idle Mask Node"
+
+							Mask
+							{
+								
+								"Bn_Necka01" = 1.0
+								"Bn_Neckb01" = 1.0
+								"Bn_Neckc01" = 1.0
+								"Bn_Head01" = 1.0
+								"Bn_Jaw" = 1.0
+								"Bn_L_Ear01" = 1.0
+								"Bn_R_Ear01" = 1.0
+							}
+							Children
+							{
+								0 = "Standing Idle Node"
+								1 = "Head Slot"
+							}
+						}
+						BlendState
+						{
+							name = "Goat State"
+							state_name = "AIState"
+							transitionTime = 0.4
+
+							States
+							{
+								0 = "Idle Mask Node"
+								1 = "Walk Node"
+								2 = "Run Node"
+								3 = "Trot Node"
+							}
+						}
+						BlendSlot
+						{
+							name = "Upper Torso"
+
+							Children
+							{
+								0 = "Goat State"
+							}
+						}
+						BlendByBoneMask
+						{
+							name = "Upper Torso Bone Mask Node"
+
+							Mask
+							{
+								
+								"Bn_Necka01" = 1.0
+								"Bn_Neckb01" = 1.0
+								"Bn_Neckc01" = 1.0
+								"Bn_Head01" = 1.0
+								"Bn_Jaw" = 1.0
+								"Bn_L_Ear01" = 1.0
+								"Bn_R_Ear01" = 1.0
+							}
+							Children
+							{
+								0 = "Goat State"
+								1 = "Upper Torso"
+							}
+						}
+						BlendSlot
+						{
+							name = "Full Body"
+
+							Children
+							{
+								0 = "Upper Torso Bone Mask Node"
+							}
+						}
+					}
+				}
+			}
+			Children
+			{
+				Spawn Goat Emitter
+				{		
+					Bn_Goat01
+				}
+			}
+		}
+	}
+}
